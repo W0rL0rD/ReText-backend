@@ -10,6 +10,7 @@ CORS(app)
 #     return 'Hello, World!'
 
 @app.route('/verbose', methods=['POST'])
+@cross_origin()
 def verbose():
     if request.method == 'POST':
         sentence = request.get_json().get('sentence')
